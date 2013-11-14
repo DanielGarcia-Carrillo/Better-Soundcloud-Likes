@@ -1,0 +1,47 @@
+body {
+  font: 14px/18px sans-serif;
+}
+
+ul.active {
+  list-style: none;
+  margin: 20px auto;
+  visibility: visible;
+  width: 900px;
+}
+
+li.with-sc-player {
+  background-color: #ffffff;
+  cursor: default
+}
+
+li {
+  border: solid 1px #f0f0f0;
+  height: 50px;
+  padding: 10px;
+  width: 100%;
+}
+
+li:hover {
+  background-color: #fd6503;
+  cursor: pointer;
+}
+
+li:first-child {
+  border-radius: 3px 3px 0 0;
+}
+
+li:last-child {
+  border-radius: 0 0 3px 3px;
+}
+
+h3 {
+  display: inline-block;
+  margin: auto 0;
+}
+
+li img {
+  display: inline-block;
+  height: 50px;
+  margin-right: 10px;
+  width: 50px;
+}
