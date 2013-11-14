@@ -9,11 +9,16 @@ ul.active {
   width: 900px;
 }
 
-li.with-sc-player {
+.with-sc-player:hover {
   background-color: #ffffff;
-  cursor: default
+  cursor: default;
+  pointer-events: none;
 }
 
+iframe {
+  /* the ifram is within the player list item, so we have to reenable pointer-events */
+  pointer-events: auto;
+}
 li {
   border: solid 1px #f0f0f0;
   height: 50px;
