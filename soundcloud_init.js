@@ -8,7 +8,6 @@ SC.initialize({
 function fetchWidget(url, elem) {
   SC.oEmbed(url, { auto_play: true, show_comments: false }, function(oEmbed) {
     // I should just add a class to this and then use CSS to color it
-    elem.className += 'with-sc-player';
     elem.style.height = (50 + oEmbed.height) + 'px';
     elem.innerHTML += oEmbed.html;
   });
@@ -31,6 +30,8 @@ window.onload = function () {
           
           track_list_item.addEventListener('click', function(e) {
             e.preventDefault;
+            // Put the classname here so we can style without having to wait for the request
+    		track_list_item.className += 'with-sc-player';
 			fetchWidget(fav.permalink_url, track_list_item);
           });
           track_list.appendChild(track_list_item);

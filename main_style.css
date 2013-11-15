@@ -9,6 +9,16 @@ ul.active {
   width: 900px;
 }
 
+#connect-button {
+  background: none;
+  border: 0;
+  outline: none;
+}
+
+#connect-button:hover {
+  opacity: .8;
+}
+
 .with-sc-player:hover {
   background-color: #ffffff;
   cursor: default;
@@ -16,9 +26,10 @@ ul.active {
 }
 
 iframe {
-  /* the ifram is within the player list item, so we have to reenable pointer-events */
+  /* the iframe is within the player list item, so we have to reenable pointer-events */
   pointer-events: auto;
 }
+
 li {
   border: solid 1px #f0f0f0;
   height: 50px;
