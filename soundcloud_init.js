@@ -18,6 +18,7 @@ window.onload = function () {
     SC.connect(function() {
       SC.get('/me/favorites.json', {limit: 200}, function(my_favorites) {
         var track_list = document.getElementById('tracks-list');
+        track_list.className = 'active';
         my_favorites.forEach(function(fav) {
           var track_list_item = document.createElement('li');
           var cover_image = document.createElement('img');
@@ -29,14 +30,13 @@ window.onload = function () {
           track_list_item.appendChild(title_text);
           
           track_list_item.addEventListener('click', function(e) {
-            e.preventDefault;
+            e.preventDefault();
             // Put the classname here so we can style without having to wait for the request
-    		track_list_item.className += 'with-sc-player';
+            track_list_item.className += 'with-sc-player';
 			fetchWidget(fav.permalink_url, track_list_item);
           });
           track_list.appendChild(track_list_item);
         });
-        track_list.className = 'active';
       });
     });
   
