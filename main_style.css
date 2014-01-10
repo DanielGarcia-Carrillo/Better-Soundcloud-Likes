@@ -5,6 +5,7 @@ body {
 ul.active {
   list-style: none;
   margin: 20px auto;
+  max-width: 100%;
   visibility: visible;
   width: 900px;
 }
