@@ -13,7 +13,7 @@ function fetchWidget(url, elem) {
   });
 }
 
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('connect-button').addEventListener('click', function(e) {
     SC.connect(function() {
       SC.get('/me/favorites.json', {limit: 200}, function(my_favorites) {
@@ -43,4 +43,4 @@ window.onload = function () {
   // Hide after authentication
   this.style.display = 'none';
   });
-};
+});
