@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Put the classname here so we can style without having to wait for the request
             track_list_item.className += 'with-sc-player';
 			fetchWidget(fav.permalink_url, track_list_item);
+            // We don't want to be able to accidentally fetch again, the arguments.callee is used because this is an anonymous function
+            this.removeEventListener('click',arguments.callee);
           });
           track_list.appendChild(track_list_item);
         });
